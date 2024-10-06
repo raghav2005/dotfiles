@@ -1,15 +1,15 @@
 # ignore everything by default
 *
 
-# # bash stuff (profile just sources bashrc, since it's the only thing sourced
-# # when a shell is a login shell)
-# !.bash*
-# .*.swp
-# .bash_history
-# .bash_local
-# .bash_logout
-# .bash_profile_hidden # check this
-# !.profile
+# bash stuff
+!*.bash*
+!.bash/*
+.*.swp
+.bash_history
+.bash_profile.local
+.bash_logout
+.bash_profile_hidden
+!.profile
 
 # # Zsh
 # !.zshrc

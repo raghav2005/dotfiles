@@ -431,7 +431,7 @@ function prompt_command {
  
 # create a $fill of all screen width minus the time string and a space:
  
-let fillsize=${COLUMNS}-9
+let fillsize=${COLUMNS}-16
  
 fill=""
  

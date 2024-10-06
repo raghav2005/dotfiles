@@ -1,6 +1,10 @@
 # ignore everything by default
 *
 
+# to link files to ~/
+!sync_dotfiles.sh
+!watch_for_sync_changes.sh
+
 # bash stuff
 !*.bash*
 !.bash/*

@@ -14,10 +14,15 @@ for item in "$DOTFILES_DIR"/.* "$DOTFILES_DIR"/*; do
           "$basename" == ".gitmodules" || "$basename" == "sync_dotfiles.sh" ]]; then
         continue
     fi
-    
+
+    # check if it's a directory and already exists at the target location
+    if [[ -d "$item" && -d "$TARGET_DIR/$basename" ]]; then
+        continue
+    fi
+
     # create a symbolic link in the target directory
     ln -sf "$item" "$TARGET_DIR/$basename"
 done
 
 # ensure echo is output on a new line and directed to the terminal
-echo -e "\ndotfiles synced!" > /dev/tty
+echo -e "dotfiles synced!" > /dev/tty

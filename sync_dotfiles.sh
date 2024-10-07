@@ -11,7 +11,8 @@ for item in "$DOTFILES_DIR"/.* "$DOTFILES_DIR"/*; do
     # skip files and directories we want to ignore
     if [[ "$basename" == "." || "$basename" == ".." || "$basename" == ".gitignore" || \
           "$basename" == "README.md" || "$basename" == ".git" || \
-          "$basename" == ".gitmodules" || "$basename" == "sync_dotfiles.sh" ]]; then
+          "$basename" == ".gitmodules" || "$basename" == "sync_dotfiles.sh" || \
+          "$basename" == "watch_for_sync_changes.sh" ]]; then
         continue
     fi
 
